@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>&lt;no title&gt; &#8212; Les espaces publics numériques des controverses en santé-environnement</title>
+    <title>&lt;no title&gt; &#8212; L&#39;expertise sanitaire à l&#39;épreuve des espaces publics numériques</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -51,12 +51,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Chargement des données et nettoyage des données" href="Les_mondes_sociaux_de_la_controverse.html" />
-    <link rel="prev" title="Welcome to your Jupyter Book" href="intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -100,7 +96,7 @@ const thebe_selector_output = ".output, .cell_output"
       <img src="_static/logo.png" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">Les espaces publics numériques des controverses en santé-environnement</h1>
+      <h1 class="site-logo" id="site-title">L'expertise sanitaire à l'épreuve des espaces publics numériques</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
@@ -112,15 +108,27 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="intro.html">
-                    Welcome to your Jupyter Book
+                    L’expertise sanitaire à l’épreuve des espaces publics numériques
                 </a>
             </li>
         </ul>
         <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="Les_mondes_sociaux_de_la_controverse.html">
-   Chargement des données et nettoyage des données
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="analyse_annot_2.html">
+   La constitution des corpus
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Les_mondes_sociaux_de_la_controverse.html">
+     L’annotation des comptes
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -416,9 +424,9 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_30227/637638899.py:1: FutureWarning: The default value of regex will change from True to False in a future version.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_14007/637638899.py:1: FutureWarning: The default value of regex will change from True to False in a future version.
   df_tweet[&quot;world&quot;] = df_tweet[&quot;world&quot;].str.replace(&#39;\{&quot;choices&quot;: \[&#39;, &quot;&quot;)
-/tmp/ipykernel_30227/637638899.py:3: FutureWarning: The default value of regex will change from True to False in a future version.
+/tmp/ipykernel_14007/637638899.py:3: FutureWarning: The default value of regex will change from True to False in a future version.
   df_tweet[&quot;world&quot;] = df_tweet[&quot;world&quot;].str.replace(&#39;\]\}&#39;, &quot;&quot;)
 </pre></div>
 </div>
@@ -1152,7 +1160,7 @@ dtype: int64
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_30227</span><span class="o">/</span><span class="mf">1210659975.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_14007</span><span class="o">/</span><span class="mf">1210659975.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="nb">len</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
 
 <span class="ne">NameError</span>: name &#39;result&#39; is not defined
@@ -1441,20 +1449,6 @@ dtype: int64
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="intro.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Welcome to your Jupyter Book</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="Les_mondes_sociaux_de_la_controverse.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Chargement des données et nettoyage des données</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
 </div>
             </footer>
         </div>
@@ -1462,7 +1456,7 @@ dtype: int64
     <div class="footer-content row">
         <footer class="col footer"><p>
   
-    By Médialab<br/>
+    By Manon Berriche, Dominique Cardon, Jean-Philippe Cointet, Théophile Lenoir, Aymeric Luneau, Béatrice Mazoyer, Andreï Mogoutov, Thomas Tari<br/>
   
       &copy; Copyright 2022.<br/>
 </p>

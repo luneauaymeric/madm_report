@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Chargement des données et nettoyage des données &#8212; Les espaces publics numériques des controverses en santé-environnement</title>
+    <title>Chargement des données et nettoyage des données &#8212; L&#39;expertise sanitaire à l&#39;épreuve des espaces publics numériques</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -96,7 +96,7 @@ const thebe_selector_output = ".output, .cell_output"
       <img src="_static/logo.png" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">Les espaces publics numériques des controverses en santé-environnement</h1>
+      <h1 class="site-logo" id="site-title">L'expertise sanitaire à l'épreuve des espaces publics numériques</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
@@ -108,20 +108,27 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="intro.html">
-                    Welcome to your Jupyter Book
+                    L’expertise sanitaire à l’épreuve des espaces publics numériques
                 </a>
             </li>
         </ul>
         <ul class="nav bd-sidenav">
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="analyse_annot_2.html">
-   La composition des corpus
+   La constitution des corpus
   </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Les_mondes_sociaux_de_la_controverse.html">
-   Chargement des données et nettoyage des données
-  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Les_mondes_sociaux_de_la_controverse.html">
+     L’annotation des comptes
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -598,12 +605,19 @@ Path base :  /home/aymeric/python-scripts/anses_medialab/datas/
 </div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_4823</span><span class="o">/</span><span class="mf">3188974484.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">     </span><span class="mi">15</span> <span class="n">tweets</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_14097</span><span class="o">/</span><span class="mf">3188974484.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">     </span><span class="mi">16</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="p">[</span><span class="n">f</span> <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">paths</span> <span class="k">if</span> <span class="ow">not</span> <span class="s1">&#39;.zip&#39;</span> <span class="ow">in</span> <span class="n">f</span><span class="p">]:</span>
-<span class="ne">---&gt; </span><span class="mi">17</span>     <span class="n">df</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;user_id&quot;</span><span class="p">:</span><span class="nb">str</span><span class="p">})</span>
-<span class="g g-Whitespace">     </span><span class="mi">18</span>     <span class="n">tweets</span><span class="o">=</span><span class="n">tweets</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">17</span>     <span class="n">df</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;user_id&quot;</span><span class="p">:</span><span class="nb">str</span><span class="p">})</span>
+<span class="ne">---&gt; </span><span class="mi">18</span>     <span class="n">tweets</span><span class="o">=</span><span class="n">tweets</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="g g-Whitespace">     </span><span class="mi">19</span> <span class="n">tweets</span><span class="o">=</span><span class="n">tweets</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">20</span> <span class="n">tweets</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">tweets</span><span class="p">[</span><span class="s1">&#39;local_time&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">date</span>
+
+<span class="nn">~/anaconda3/envs/analyse_tweets/lib/python3.9/site-packages/pandas/core/frame.py</span> in <span class="ni">append</span><span class="nt">(self, other, ignore_index, verify_integrity, sort)</span>
+<span class="g g-Whitespace">   </span><span class="mi">8963</span>             <span class="n">to_concat</span> <span class="o">=</span> <span class="p">[</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">]</span>
+<span class="g g-Whitespace">   </span><span class="mi">8964</span>         <span class="k">return</span> <span class="p">(</span>
+<span class="ne">-&gt; </span><span class="mi">8965</span>             <span class="n">concat</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">8966</span>                 <span class="n">to_concat</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">8967</span>                 <span class="n">ignore_index</span><span class="o">=</span><span class="n">ignore_index</span><span class="p">,</span>
 
 <span class="nn">~/anaconda3/envs/analyse_tweets/lib/python3.9/site-packages/pandas/util/_decorators.py</span> in <span class="ni">wrapper</span><span class="nt">(*args, **kwargs)</span>
 <span class="g g-Whitespace">    </span><span class="mi">309</span>                     <span class="n">stacklevel</span><span class="o">=</span><span class="n">stacklevel</span><span class="p">,</span>
@@ -612,19 +626,42 @@ Path base :  /home/aymeric/python-scripts/anses_medialab/datas/
 <span class="g g-Whitespace">    </span><span class="mi">312</span> 
 <span class="g g-Whitespace">    </span><span class="mi">313</span>         <span class="k">return</span> <span class="n">wrapper</span>
 
-<span class="nn">~/anaconda3/envs/analyse_tweets/lib/python3.9/site-packages/pandas/io/parsers/readers.py</span> in <span class="ni">read_csv</span><span class="nt">(filepath_or_buffer, sep, delimiter, header, names, index_col, usecols, squeeze, prefix, mangle_dupe_cols, dtype, engine, converters, true_values, false_values, skipinitialspace, skiprows, skipfooter, nrows, na_values, keep_default_na, na_filter, verbose, skip_blank_lines, parse_dates, infer_datetime_format, keep_date_col, date_parser, dayfirst, cache_dates, iterator, chunksize, compression, thousands, decimal, lineterminator, quotechar, quoting, doublequote, escapechar, comment, encoding, encoding_errors, dialect, error_bad_lines, warn_bad_lines, on_bad_lines, delim_whitespace, low_memory, memory_map, float_precision, storage_options)</span>
-<span class="g g-Whitespace">    </span><span class="mi">584</span>     <span class="n">kwds</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">kwds_defaults</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">585</span> 
-<span class="ne">--&gt; </span><span class="mi">586</span>     <span class="k">return</span> <span class="n">_read</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="n">kwds</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">587</span> 
-<span class="g g-Whitespace">    </span><span class="mi">588</span> 
+<span class="nn">~/anaconda3/envs/analyse_tweets/lib/python3.9/site-packages/pandas/core/reshape/concat.py</span> in <span class="ni">concat</span><span class="nt">(objs, axis, join, ignore_index, keys, levels, names, verify_integrity, sort, copy)</span>
+<span class="g g-Whitespace">    </span><span class="mi">305</span>     <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">306</span> 
+<span class="ne">--&gt; </span><span class="mi">307</span>     <span class="k">return</span> <span class="n">op</span><span class="o">.</span><span class="n">get_result</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">308</span> 
+<span class="g g-Whitespace">    </span><span class="mi">309</span> 
 
-<span class="nn">~/anaconda3/envs/analyse_tweets/lib/python3.9/site-packages/pandas/io/parsers/readers.py</span> in <span class="ni">_read</span><span class="nt">(filepath_or_buffer, kwds)</span>
-<span class="g g-Whitespace">    </span><span class="mi">486</span> 
-<span class="g g-Whitespace">    </span><span class="mi">487</span>     <span class="k">with</span> <span class="n">parser</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">488</span>         <span class="k">return</span> <span class="n">parser</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">nrows</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">489</span> 
-<span class="g g-Whitespace">    </span><span class="mi">490</span> 
+<span class="nn">~/anaconda3/envs/analyse_tweets/lib/python3.9/site-packages/pandas/core/reshape/concat.py</span> in <span class="ni">get_result</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">530</span>                 <span class="n">mgrs_indexers</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">obj</span><span class="o">.</span><span class="n">_mgr</span><span class="p">,</span> <span class="n">indexers</span><span class="p">))</span>
+<span class="g g-Whitespace">    </span><span class="mi">531</span> 
+<span class="ne">--&gt; </span><span class="mi">532</span>             <span class="n">new_data</span> <span class="o">=</span> <span class="n">concatenate_managers</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">533</span>                 <span class="n">mgrs_indexers</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">new_axes</span><span class="p">,</span> <span class="n">concat_axis</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">bm_axis</span><span class="p">,</span> <span class="n">copy</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">copy</span>
+<span class="g g-Whitespace">    </span><span class="mi">534</span>             <span class="p">)</span>
+
+<span class="nn">~/anaconda3/envs/analyse_tweets/lib/python3.9/site-packages/pandas/core/internals/concat.py</span> in <span class="ni">concatenate_managers</span><span class="nt">(mgrs_indexers, axes, concat_axis, copy)</span>
+<span class="g g-Whitespace">    </span><span class="mi">224</span>             <span class="n">fastpath</span> <span class="o">=</span> <span class="n">blk</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">dtype</span> <span class="o">==</span> <span class="n">values</span><span class="o">.</span><span class="n">dtype</span>
+<span class="g g-Whitespace">    </span><span class="mi">225</span>         <span class="k">else</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">226</span>             <span class="n">values</span> <span class="o">=</span> <span class="n">_concatenate_join_units</span><span class="p">(</span><span class="n">join_units</span><span class="p">,</span> <span class="n">concat_axis</span><span class="p">,</span> <span class="n">copy</span><span class="o">=</span><span class="n">copy</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">227</span>             <span class="n">fastpath</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="g g-Whitespace">    </span><span class="mi">228</span> 
+
+<span class="nn">~/anaconda3/envs/analyse_tweets/lib/python3.9/site-packages/pandas/core/internals/concat.py</span> in <span class="ni">_concatenate_join_units</span><span class="nt">(join_units, concat_axis, copy)</span>
+<span class="g g-Whitespace">    </span><span class="mi">521</span> 
+<span class="g g-Whitespace">    </span><span class="mi">522</span>     <span class="k">else</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">523</span>         <span class="n">concat_values</span> <span class="o">=</span> <span class="n">concat_compat</span><span class="p">(</span><span class="n">to_concat</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="n">concat_axis</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">524</span> 
+<span class="g g-Whitespace">    </span><span class="mi">525</span>     <span class="k">return</span> <span class="n">concat_values</span>
+
+<span class="nn">~/anaconda3/envs/analyse_tweets/lib/python3.9/site-packages/pandas/core/dtypes/concat.py</span> in <span class="ni">concat_compat</span><span class="nt">(to_concat, axis, ea_compat_axis)</span>
+<span class="g g-Whitespace">    </span><span class="mi">149</span>                 <span class="n">to_concat</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s2">&quot;object&quot;</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">to_concat</span><span class="p">]</span>
+<span class="g g-Whitespace">    </span><span class="mi">150</span> 
+<span class="ne">--&gt; </span><span class="mi">151</span>     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">(</span><span class="n">to_concat</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="n">axis</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">152</span> 
+<span class="g g-Whitespace">    </span><span class="mi">153</span> 
+
+<span class="nn">&lt;__array_function__ internals&gt;</span> in <span class="ni">concatenate</span><span class="nt">(*args, **kwargs)</span>
 
 <span class="ne">KeyboardInterrupt</span>: 
 </pre></div>
@@ -983,7 +1020,7 @@ dtype: int64
     <div class="footer-content row">
         <footer class="col footer"><p>
   
-    By Médialab<br/>
+    By Manon Berriche, Dominique Cardon, Jean-Philippe Cointet, Théophile Lenoir, Aymeric Luneau, Béatrice Mazoyer, Andreï Mogoutov, Thomas Tari<br/>
   
       &copy; Copyright 2022.<br/>
 </p>

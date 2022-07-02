@@ -22,7 +22,7 @@ len(result.columns)
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mNameError[0m                                 Traceback (most recent call last)
-[0;32m/tmp/ipykernel_30227/1210659975.py[0m in [0;36m<module>[0;34m[0m
+[0;32m/tmp/ipykernel_14007/1210659975.py[0m in [0;36m<module>[0;34m[0m
 [0;32m----> 1[0;31m [0mlen[0m[0;34m([0m[0mresult[0m[0;34m.[0m[0mcolumns[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 [0m
 [0;31mNameError[0m: name 'result' is not defined
