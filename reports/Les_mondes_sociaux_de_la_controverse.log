@@ -1,15 +1,4 @@
 Traceback (most recent call last):
-  File "/home/aymeric/anaconda3/envs/analyse_tweets/lib/python3.9/site-packages/nbclient/client.py", line 626, in _async_poll_for_reply
-    msg = await ensure_async(self.kc.shell_channel.get_msg(timeout=new_timeout))
-  File "/home/aymeric/anaconda3/envs/analyse_tweets/lib/python3.9/site-packages/nbclient/util.py", line 96, in ensure_async
-    result = await obj
-  File "/home/aymeric/anaconda3/envs/analyse_tweets/lib/python3.9/site-packages/jupyter_client/channels.py", line 230, in get_msg
-    raise Empty
-_queue.Empty
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
   File "/home/aymeric/anaconda3/envs/analyse_tweets/lib/python3.9/site-packages/jupyter_cache/executors/utils.py", line 51, in single_nb_execution
     executenb(
   File "/home/aymeric/anaconda3/envs/analyse_tweets/lib/python3.9/site-packages/nbclient/client.py", line 1093, in execute
@@ -22,18 +11,31 @@ Traceback (most recent call last):
     return future.result()
   File "/home/aymeric/anaconda3/envs/analyse_tweets/lib/python3.9/site-packages/nbclient/client.py", line 559, in async_execute
     await self.async_execute_cell(
-  File "/home/aymeric/anaconda3/envs/analyse_tweets/lib/python3.9/site-packages/nbclient/client.py", line 838, in async_execute_cell
-    exec_reply = await self.task_poll_for_reply
-  File "/home/aymeric/anaconda3/envs/analyse_tweets/lib/python3.9/site-packages/nbclient/client.py", line 650, in _async_poll_for_reply
-    await self._async_handle_timeout(timeout, cell)
-  File "/home/aymeric/anaconda3/envs/analyse_tweets/lib/python3.9/site-packages/nbclient/client.py", line 697, in _async_handle_timeout
-    raise CellTimeoutError.error_from_timeout_and_cell(
-nbclient.exceptions.CellTimeoutError: A cell timed out while it was being executed, after 30 seconds.
-The message was: Cell execution timed out.
-Here is a preview of the cell contents:
--------------------
-dftext = pd.read_csv(f'{path_base}tweets_and_posts_with_annotated_account.csv', sep = ",", doublequote=True)
-#df.to_csv(f'/home/aymeric/python-scripts/anses_medialab/datas/all_annotated_account.csv', sep = ",", index=False)
-len(dftext)
--------------------
+  File "/home/aymeric/anaconda3/envs/analyse_tweets/lib/python3.9/site-packages/nbclient/client.py", line 854, in async_execute_cell
+    self._check_raise_for_error(cell, exec_reply)
+  File "/home/aymeric/anaconda3/envs/analyse_tweets/lib/python3.9/site-packages/nbclient/client.py", line 756, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+d = dftext.dropna(subset=["Synthetic_logics"])
+df_rank = ranked_element(data = d, which="Synthetic_logics", top_rank= None)
+bump = interactive_bump_chart(data = df_rank, which = "Synthetic_logics", cluster = None)
+------------------
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mAttributeError[0m                            Traceback (most recent call last)
+[0;32m/tmp/ipykernel_9838/3311158067.py[0m in [0;36m<module>[0;34m[0m
+[1;32m      1[0m [0md[0m [0;34m=[0m [0mdftext[0m[0;34m.[0m[0mdropna[0m[0;34m([0m[0msubset[0m[0;34m=[0m[0;34m[[0m[0;34m"Synthetic_logics"[0m[0;34m][0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      2[0m [0mdf_rank[0m [0;34m=[0m [0mranked_element[0m[0;34m([0m[0mdata[0m [0;34m=[0m [0md[0m[0;34m,[0m [0mwhich[0m[0;34m=[0m[0;34m"Synthetic_logics"[0m[0;34m,[0m [0mtop_rank[0m[0;34m=[0m [0;32mNone[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0;32m----> 3[0;31m [0mbump[0m [0;34m=[0m [0minteractive_bump_chart[0m[0;34m([0m[0mdata[0m [0;34m=[0m [0mdf_rank[0m[0;34m,[0m [0mwhich[0m [0;34m=[0m [0;34m"Synthetic_logics"[0m[0;34m,[0m [0mcluster[0m [0;34m=[0m [0;32mNone[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m
+[0;32m/tmp/ipykernel_9838/1961923264.py[0m in [0;36minteractive_bump_chart[0;34m(data, which, cluster)[0m
+[1;32m     10[0m     [0mfig[0m[0;34m[[0m[0;34m'layout'[0m[0;34m][0m[0;34m[[0m[0;34m'yaxis'[0m[0;34m][0m[0;34m[[0m[0;34m'autorange'[0m[0;34m][0m [0;34m=[0m [0;34m"reversed"[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     11[0m [0;34m[0m[0m
+[0;32m---> 12[0;31m     [0mfig[0m[0;34m.[0m[0mset_xlabel[0m[0;34m([0m[0;34mf'{x}'[0m[0;34m,[0m [0mfontsize[0m [0;34m=[0m [0;36m14[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m     13[0m     [0mfig[0m[0;34m.[0m[0mset_ylabel[0m[0;34m([0m[0;34m"Rank"[0m[0;34m,[0m [0mfontsize[0m [0;34m=[0m [0;36m14[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     14[0m [0;34m[0m[0m
+
+[0;31mAttributeError[0m: 'Figure' object has no attribute 'set_xlabel'
+AttributeError: 'Figure' object has no attribute 'set_xlabel'
 
