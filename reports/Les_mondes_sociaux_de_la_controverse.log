@@ -17,25 +17,13 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-d = dftext.dropna(subset=["Synthetic_logics"])
-df_rank = ranked_element(data = d, which="Synthetic_logics", top_rank= None)
-bump = interactive_bump_chart(data = df_rank, which = "Synthetic_logics", cluster = None)
+Dans la suite du document, les termes de "page" et "groupe" font exclusivement référence aux "pages et groupes Facebook".
 ------------------
 
-[0;31m---------------------------------------------------------------------------[0m
-[0;31mAttributeError[0m                            Traceback (most recent call last)
-[0;32m/tmp/ipykernel_9838/3311158067.py[0m in [0;36m<module>[0;34m[0m
-[1;32m      1[0m [0md[0m [0;34m=[0m [0mdftext[0m[0;34m.[0m[0mdropna[0m[0;34m([0m[0msubset[0m[0;34m=[0m[0;34m[[0m[0;34m"Synthetic_logics"[0m[0;34m][0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[1;32m      2[0m [0mdf_rank[0m [0;34m=[0m [0mranked_element[0m[0;34m([0m[0mdata[0m [0;34m=[0m [0md[0m[0;34m,[0m [0mwhich[0m[0;34m=[0m[0;34m"Synthetic_logics"[0m[0;34m,[0m [0mtop_rank[0m[0;34m=[0m [0;32mNone[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0;32m----> 3[0;31m [0mbump[0m [0;34m=[0m [0minteractive_bump_chart[0m[0;34m([0m[0mdata[0m [0;34m=[0m [0mdf_rank[0m[0;34m,[0m [0mwhich[0m [0;34m=[0m [0;34m"Synthetic_logics"[0m[0;34m,[0m [0mcluster[0m [0;34m=[0m [0;32mNone[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m
-[0;32m/tmp/ipykernel_9838/1961923264.py[0m in [0;36minteractive_bump_chart[0;34m(data, which, cluster)[0m
-[1;32m     10[0m     [0mfig[0m[0;34m[[0m[0;34m'layout'[0m[0;34m][0m[0;34m[[0m[0;34m'yaxis'[0m[0;34m][0m[0;34m[[0m[0;34m'autorange'[0m[0;34m][0m [0;34m=[0m [0;34m"reversed"[0m[0;34m[0m[0;34m[0m[0m
-[1;32m     11[0m [0;34m[0m[0m
-[0;32m---> 12[0;31m     [0mfig[0m[0;34m.[0m[0mset_xlabel[0m[0;34m([0m[0;34mf'{x}'[0m[0;34m,[0m [0mfontsize[0m [0;34m=[0m [0;36m14[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m     13[0m     [0mfig[0m[0;34m.[0m[0mset_ylabel[0m[0;34m([0m[0;34m"Rank"[0m[0;34m,[0m [0mfontsize[0m [0;34m=[0m [0;36m14[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[1;32m     14[0m [0;34m[0m[0m
+[0;36m  File [0;32m"/tmp/ipykernel_11553/510450339.py"[0;36m, line [0;32m1[0m
+[0;31m    Dans la suite du document, les termes de "page" et "groupe" font exclusivement référence aux "pages et groupes Facebook".[0m
+[0m         ^[0m
+[0;31mSyntaxError[0m[0;31m:[0m invalid syntax
 
-[0;31mAttributeError[0m: 'Figure' object has no attribute 'set_xlabel'
-AttributeError: 'Figure' object has no attribute 'set_xlabel'
+SyntaxError: invalid syntax (510450339.py, line 1)
 
